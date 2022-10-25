@@ -15,42 +15,17 @@
       </tr>
     </thead>
     <tbody>
+      {% for tic in tickets%}
       <tr>
-        <th scope="col">1</th>
-        <td>Mark Mise en place d'un système de travail de gestion des factures</td>
-        <td>OttoMark Mise en place d'un système de travail de gestion des factures</td>
-        <td>@mdoMark Mise en place d'un système de travail de gestion des factures</td>
-        <td> @kevinMark Mise en place d'un système de travail de gestion des factures</td>
-        <td> @kevinMark Mise en place d'un système de travail de gestion des factures</td>
-        <td> @kevinMark Mise en place d'un système de travail de gestion des factures</td>
+        <th scope="col">{{tic.Id}} </th>
+        <td>{{tic.Objet}}</td>
+        <td>{{tic.Description}}</td>
+        <td>{{tic.Type}}</td>
+        <td>{{tic.Statut}} </td>
+        <td>{{tic.DateCréation}} </td>
+        <td>{{tic.HeureCréation}}</td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>@patrick</td>
-        <td>@patrick</td>
-        <td>@patrick</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>@rodrigue</td>
-        <td>@patrick</td>
-        <td>@patrick</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Lar</td>
-        <td>the Bi</td>
-        <td>@twi</td>
-        <td> @sandrine</td>
-        <td>@patrick</td>
-        <td>@patrick</td>
-      </tr>
+      {% endfor %}
     </tbody>
   </table>
 
