@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NOM</th>
+        <th scope="col">PRENOM</th>
+        <th scope="col">TELEPHONE</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">ACTIF</th>
+        <th scope="col">DATE CREATION</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cpt in compte%}
+      <tr>
+        <th scope="col">{{cpt.id}} </th>
+        <td>{{cpt.nom}}</td>
+        <td>{{cpt.prenom}}</td>
+        <td>{{cpt.telephone}}</td>
+        <td>{{cpt.email}} </td>
+        <td>{{cpt.actif}} </td>
+        <td>{{cpt.dateCreation}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

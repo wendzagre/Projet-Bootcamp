@@ -6,24 +6,28 @@
     <thead>
       <tr>
         <th scope="col">ID</th>
+        <th scope="col">Matricule</th>
         <th scope="col">Objet</th>
         <th scope="col">Description</th>
         <th scope="col">type</th>
-        <th scope="col">Statut</th>
+        <th scope="col">Ministère</th>
         <th scope="col">Date Création</th>
         <th scope="col">Heure demande</th>
+        <th scope="col">Statut</th>
       </tr>
     </thead>
     <tbody>
       {% for tic in tickets%}
       <tr>
         <th scope="col">{{tic.Id}} </th>
+        <td>{{tic.Matricule}}</td>
         <td>{{tic.Objet}}</td>
         <td>{{tic.Description}}</td>
         <td>{{tic.Type}}</td>
-        <td>{{tic.Statut}} </td>
+        <td>{{tic.Ministère}}</td>
         <td>{{tic.DateCréation}} </td>
         <td>{{tic.HeureCréation}}</td>
+        <td>{{tic.Statut}} </td>
       </tr>
       {% endfor %}
     </tbody>
