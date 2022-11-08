@@ -39,5 +39,6 @@ def Agent(request):
         }
     return render(request,'agent.html',context)
     
-
+def index(request):
+    return render(request,'index.html')
 # Create your views here.

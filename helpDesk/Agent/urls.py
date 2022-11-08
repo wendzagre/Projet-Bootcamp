@@ -3,4 +3,8 @@ from .import views
 
 urlpatterns=[
     path('',views.Agent,name='Agent'),
+    path('index.html',views.index,name='index'),
+    
+    
+     
 ]
