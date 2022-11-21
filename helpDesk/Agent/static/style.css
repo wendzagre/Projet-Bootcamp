@@ -4,7 +4,7 @@
     
 }
 
-ul{
+ul {
     display: flex;
     list-style: none;
     background-color: chartreuse;
@@ -19,4 +19,14 @@ li a {
     
 }
 
- 
+.footer{
+    background-color:chartreuse;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    
+
+}
