@@ -1,0 +1,16 @@
+#templates/base.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>HelpDesk</title>
+</head>
+<body>
+    
+
+    {% block content %}  {% endblock content %}
+    {% if user.is_authenticated %}
+       <a href="{% url 'logout' %}"> Se déconnecter </a>
+</body>
+</html>
