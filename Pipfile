@@ -1,0 +1,21 @@
+[[ source ]]
+url = " https://pypi.org/simple "
+vérifier_ssl = vrai
+nom = " pypi "
+
+[ forfaits ]
+bruit blanc = " * "
+gunicorne = " * "
+Django = " * "
+psycopg2 = " ==2.9.4 "
+tzdata = " * "
+django-bootstrap-v5 = " * "
+dj-base de données-url = " * "
+django-jazzmin = " * "
+oreiller = " * "
+gps3 = " * "
+
+[ dev-packages ]
+
+[ nécessite ]
+version_python = " 3.10 "
