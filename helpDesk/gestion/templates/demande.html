@@ -1,0 +1,44 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container mt-3 col-md-6 offset-md-3">
+
+    <form >
+  
+      <div class="mb-3">
+          <label class="form-label" >Matricule</label>
+          <input type="text"  class="form-control">
+      </div>
+  
+      <div class="mb-3">
+          <label class="form-label" >Objet</label>
+          <input type="text" class="form-control">
+      </div>
+  
+      <div class="mb-3">
+          <label class="form-label" >Description</label>
+          <input type="email"  class="form-control">
+      </div>
+  
+      <div class="mb-3">
+          <label class="form-label" >Type </label>
+          <input type="tel"  class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" >Ministère</label>
+        <input type="tel"  class="form-control">
+    </div>
+
+   
+      <button  class="btn btn-info" type="submit"> Enregistrer</button>
+  
+    </form>
+  
+  
+  </div>
+
+  {% endblock %}

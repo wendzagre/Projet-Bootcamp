@@ -16,13 +16,24 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include,path
 import authentication.views
+from gestion import views
+from Agent import views
+
 
 
 urlpatterns = [
    path('admin/', admin.site.urls),
     path('Agent/',include('Agent.urls')),
-    path('gestion', include('gestion.urls')), #Inclure l'urls.py de l'application gestion
+    path('gestion/', include('gestion.urls')), #Inclure l'urls.py de l'application gestion
     path('',authentication.views.login_page,name='login') ,
-    path('logout/',authentication.views.logout_user,name='logout') 
+    path('logout/',authentication.views.logout_user,name='logout') ,
+    path('demande/',views.Demande,name='create-agent') ,
+    path('agent/',views.Lagent,name='create-agent') ,
+
+
+
+
+
+
 
 ]

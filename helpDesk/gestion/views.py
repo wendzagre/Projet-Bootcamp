@@ -2,6 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
+
+
+def Demande(request):
+    return render(request,'demande.html')
+
+
+
 def ticket(request):
     tickets=[
         {

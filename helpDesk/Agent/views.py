@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+def Lagent(request):
+    return render(request, 'create_agent.html')
+
 def Agent(request):
     compte=[
         {
@@ -39,6 +42,5 @@ def Agent(request):
         }
     return render(request,'agent.html',context)
     
-def index(request):
-    return render(request,'index.html')
+
 # Create your views here.
