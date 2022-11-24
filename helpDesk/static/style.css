@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding: 0;
+    
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    background-color: chartreuse;
+    padding: 20px;
+    justify-content: space-around;
+    
+}
+
+li a {
+    text-decoration: none;
+    color:black
+    
+}
+
+.footer{
+    background-color:chartreuse;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    
+
+}
