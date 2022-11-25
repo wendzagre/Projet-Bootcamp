@@ -46,6 +46,7 @@ section{
 .answer{
     max-height: 0;
     overflow: hidden;
+    transition:max-height 1.4s ease;
 }
 
 .answer p{
@@ -56,4 +57,12 @@ section{
 
 .faq.active .answer{
     max-height: 300px;
+}
+
+.faq.active svg{
+    transform: rotate(180deg);
+}
+
+svg{
+    transition: transform 0.5s ease-in;
 }
