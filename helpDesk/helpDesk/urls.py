@@ -28,6 +28,10 @@ urlpatterns = [
     path('',authentication.views.login_page,name='login') ,
     path('logout/',authentication.views.logout_user,name='logout') ,
     path('demande/',views.Demande,name='create-agent') ,
+    path('faq/',views.FAQ,name='create-agent') ,
+    path('agent/',views.Lagent,name='create-agent') ,
+
+
 
 
 

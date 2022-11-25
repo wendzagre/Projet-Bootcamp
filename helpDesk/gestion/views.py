@@ -7,6 +7,12 @@ from django.http import HttpResponse
 def Demande(request):
     return render(request,'demande.html')
 
+def FAQ(request):
+    return render(request,'Faq.html')
+
+def Lagent(request):
+    return render(request, 'create_agent.html')
+
 
 
 def ticket(request):
