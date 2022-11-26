@@ -21,14 +21,15 @@ from gestion import views
 
 
 
+
 urlpatterns = [
    path('admin/', admin.site.urls),
-    path('Agent/',include('Agent.urls')),
-    path('gestion/', include('gestion.urls')), #Inclure l'urls.py de l'application gestion
+    path('Agent/',include('Agent.urls'),name='agent'),
+    path('gestion/', include('gestion.urls'),name='ticket'), #Inclure l'urls.py de l'application gestion
     path('',authentication.views.login_page,name='login') ,
     path('logout/',authentication.views.logout_user,name='logout') ,
-    path('demande/',views.Demande,name='create-agent') ,
-    path('faq/',views.FAQ,name='create-agent') ,
+    path('demande/',views.Demande,name='demande') ,
+    path('faq/',views.FAQ,name='faq') ,
     path('agent/',views.Lagent,name='create-agent') ,
 
 

@@ -11,11 +11,11 @@
     <nav>
         <ul>
             <li><a href="">Accueil</a></li>
-            <li><a href="">Créer Demande Service</a></li>
-            <li><a href="">Créer un Agent</a></li>
-            <li><a href="">Liste des Agents</a></li>
-            <li><a href="">Consulter Demande Service</a></li>
-            <li><a href="">FAQ</a></li>
+            <li><a href="{% url 'demande' %}">Créer Demande Service</a></li>
+            <li><a href="{% url 'create-agent' %}">Créer un Agent</a></li>
+            <li><a href="{% url 'Agent' %}">Liste des Agents</a></li>
+            <li><a href="{% url 'ticket' %}">Consulter Demande Service</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
         </ul>   
           
     </nav>
