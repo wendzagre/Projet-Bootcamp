@@ -31,6 +31,15 @@ class demande(models.Model):
         MAF = 'MA'
         MSHPB = 'MS'
         MEFP = 'ME'
+        MTMUSRS='MTM'
+        MATD='MD'
+        MEA='EA'
+        MCCAT='MCA'
+        MESRI='MSI'
+        MSAJ='JAS'
+        MMC='CM'
+        MEMC='MCE'
+        MDICA='CAI'
     ministere=models.CharField(choices=Ministere.choices,max_length=5)
 
     class Statut(models.TextChoices):

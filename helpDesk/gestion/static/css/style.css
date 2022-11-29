@@ -22,7 +22,7 @@ section{
 
 .title{
     font-size: 3rem;
-    margin: 2rem orem;
+    margin: 2rem 0rem;
 }
 
 .faq{
@@ -55,7 +55,7 @@ section{
     font-size: 1.4rem;
 }
 
-.faq.active .answer{
+.faq .active .answer{
     max-height: 300px;
 }
 
