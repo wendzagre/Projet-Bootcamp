@@ -3,7 +3,7 @@ from random import choices
 
 class demande(models.Model):    
     matricule=models.IntegerField()
-    objet =models.fields.CharField(max_length=250)
+    objet =models.fields.CharField(max_length=260)
     description=models.CharField(max_length=1000)
     Type=models.CharField(max_length=20)
     ministere=models.CharField(max_length=20)

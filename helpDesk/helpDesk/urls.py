@@ -31,6 +31,7 @@ urlpatterns = [
     path('demande/',views.Demande,name='demande') ,
     path('faq/',views.FAQ,name='faq') ,
     path('agent/',views.Lagent,name='create-agent') ,
+    path('signup/',authentication.views.signup_page,name='signup')
 
 
 
