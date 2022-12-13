@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from Agent.models import Personne
+
 
 # Create your views here.
 
@@ -13,6 +15,9 @@ def FAQ(request):
 def Lagent(request):
     return render(request, 'agent.html')
 
+def personne_detail(request):
+    personne=Personne.objects.all()
+    return render(request,'agent.html',{'personne':personne})
 
 
 def ticket(request):
