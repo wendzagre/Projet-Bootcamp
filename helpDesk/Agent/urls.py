@@ -2,8 +2,8 @@ from django.urls import path #Fonction Path
 from .import views
 
 urlpatterns=[
-    path('',views.Agent,name='Agent'),
-    
+    path('',views.create_agent,name='Agent'),
+
     
     
      

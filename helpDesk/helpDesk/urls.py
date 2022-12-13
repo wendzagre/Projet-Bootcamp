@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include,path
 import authentication.views
-from gestion import views
+from  gestion import views
+
 
 
 
@@ -31,8 +32,8 @@ urlpatterns = [
     path('demande/',views.Demande,name='demande') ,
     path('faq/',views.FAQ,name='faq') ,
     path('agent/',views.Lagent,name='create-agent') ,
-    path('signup/',authentication.views.signup_page,name='signup')
-
+    path('signup/',authentication.views.signup_page,name='signup'),
+    
 
 
 

@@ -11,7 +11,7 @@ def FAQ(request):
     return render(request,'Faq.html')
 
 def Lagent(request):
-    return render(request, 'create_agent.html')
+    return render(request, 'agent.html')
 
 
 
