@@ -3,7 +3,7 @@ from .import views #raccourci pour le repertoire courant
 
 #URL patterns pour chaque ligne
 urlpatterns=[
-    path('',views.ticket,name='ticket'),
+    path('',views.create_demande,name='ticket'),
     
 
 ]

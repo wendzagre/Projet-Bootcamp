@@ -14,9 +14,6 @@ def create_agent(request):
     return render(request,'create_agent.html',{'form':form})
 
 
-def personne_detail(request):
-    personne=Personne.objects.all()
-    return render(request,'agent.html',{'personne':personne})
 
     
 

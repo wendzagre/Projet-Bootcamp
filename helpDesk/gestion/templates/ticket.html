@@ -7,7 +7,6 @@
 <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">ID</th>
         <th scope="col">Matricule</th>
         <th scope="col">Objet</th>
         <th scope="col">Description</th>
@@ -19,17 +18,17 @@
       </tr>
     </thead>
     <tbody>
-      {% for tic in tickets%}
+      {% for tic in Demande %}
       <tr>
-        <th scope="col">{{tic.Id}} </th>
-        <td>{{tic.Matricule}}</td>
-        <td>{{tic.Objet}}</td>
-        <td>{{tic.Description}}</td>
+        <th scope="col"></th>
+        <td>{{tic.matricule}}</td>
+        <td>{{tic.objet}}</td>
+        <td>{{tic.description}}</td>
         <td>{{tic.Type}}</td>
-        <td>{{tic.Ministère}}</td>
-        <td>{{tic.DateCréation}} </td>
-        <td>{{tic.HeureCréation}}</td>
-        <td>{{tic.Statut}} </td>
+        <td>{{tic.ministere}}</td>
+        <td>{{tic.dateCreation}} </td>
+        <td>{{tic.heureDemande}}</td>
+        <td>{{tic.statut}} </td>
       </tr>
       {% endfor %}
     </tbody>

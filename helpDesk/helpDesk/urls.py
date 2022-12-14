@@ -26,14 +26,17 @@ import authentication.views
 urlpatterns = [
    path('admin/', admin.site.urls),
     path('Agent/',include('Agent.urls'),name='agent'),
-    path('gestion/', include('gestion.urls'),name='ticket'), #Inclure l'urls.py de l'application gestion
+    path('gestion/', include('gestion.urls')), #Inclure l'urls.py de l'application gestion
     path('',authentication.views.login_page,name='login') ,
     path('logout/',authentication.views.logout_user,name='logout') ,
-    path('demande/',views.Demande,name='demande') ,
+    path('demande/',views.create_demande,name='demande') ,
     path('faq/',views.FAQ,name='faq') ,
     path('agent/',views.Lagent,name='create-agent') ,
     path('signup/',authentication.views.signup_page,name='signup'),
     path('personneDetail/',views.personne_detail,name='detail'),
+    path('tick/',views.tickete,name='tiq'),
+    path('demandeDetail/',views.demande_detail,name='det'),
+
 
 
 

@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from gestion.models import demande
 from Agent.models import Personne
+from gestion.forms import demandeForm
 
 
 # Create your views here.
 
-
-def Demande(request):
-    return render(request,'demande.html')
+def tickete(request):
+    return render(request,'ticket.html')
 
 def FAQ(request):
     return render(request,'Faq.html')
@@ -20,56 +21,17 @@ def personne_detail(request):
     return render(request,'agent.html',{'personne':personne})
 
 
-def ticket(request):
-    tickets=[
-        {
-            'Id':'1',
-            'Matricule':'805pgt47',
-            'Objet' :'Mise en place un réseau',
-            'Description':'Problème Intégration à mon compte ALIAS',
-            'Type':'Maintenance',
-            'Ministère':"MENA",
-            'Statut':'En Cours',
-            'DateCréation':'12/4/2022',
-            'HeureCréation':'10h15'
-        },
-        {
-            'Id':'2',
-            'Matricule':'805pgt70',
-            'Objet' :'Mise en place un réseau',
-            'Description':'Etat avancement salaire PRISCA',
-            'Type':'RESEAU',
-            'Ministère':"MEFP",
-            'Statut':'Réglé',
-            'DateCréation':'12/4/2022',
-            'HeureCréation':'10h15'
-        },
-        {
-            'Id':'3',
-            'Matricule':'805pgt74',
-            'Objet' :'Mise en place un réseau',
-            'Description':'problème accès à mon compte SADIAN',
-            'Type':'ALIAS',
-            'Ministère':"MFPTPS",
-            'Statut':'Clos',
-            'DateCréation':'12/4/2022',
-            'HeureCréation':'10h15'
-        },
-        {
-            'Id':'4',
-            'Matricule':'805pgt58',
-            'Objet' :'Mise en place un réseau',
-            'Description':'Problème accès à mon compte SIGASPE',
-            'Type':'SADINA',
-            'Ministère':"MSHPBE",
-            'Statut':'Nouveau',
-            'DateCréation':'12/4/2022',
-            'HeureCréation':'10h15'
-        },
-    ]
-    context={
-          'tickets':tickets
-        }
-    return render(request,'ticket.html',context)
+def create_demande(request):
+    if request.method=='POST':
+        form=demandeForm(request.POST)
+        if form.is_valid():
+            Demande=form.save()
+    else:
+        form=demandeForm()  
+    return render(request,'demande.html',{'form':form})
 
+
+def demande_detail(request):
+    Demande=demande.objects.all()
+    return render(request,'ticket.html',{'Demande':Demande})
 
