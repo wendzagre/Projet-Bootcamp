@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from gestion.models import demande
 from Agent.models import Personne
 from gestion.forms import demandeForm
+from django.shortcuts import redirect
+
 
 
 # Create your views here.
@@ -26,6 +28,8 @@ def create_demande(request):
         form=demandeForm(request.POST)
         if form.is_valid():
             Demande=form.save()
+        return redirect('det')
+
     else:
         form=demandeForm()  
     return render(request,'demande.html',{'form':form})

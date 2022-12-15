@@ -5,10 +5,12 @@
     
 
 {% block content %}
+<div class="container mt-3 col-md-6 offset-md-3">
 <form action="" method="post" novalidate>
   {% csrf_token %}
   {{ form.as_p }}
   <input type="submit" value="Envoyer">
+</div>
 </form>
   
 
